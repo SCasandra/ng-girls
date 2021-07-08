@@ -39,7 +39,7 @@ export class TodoListService {
 
   deleteItem(item: TodoItem): void {
     const index = this.todoList.indexOf(item);
-    this.todoList.splice(1);
+    this.todoList.splice(index, 1);
     this.saveList();
   }
 
