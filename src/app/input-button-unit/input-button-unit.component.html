@@ -2,6 +2,7 @@
   The title is: {{title}}
 </p>
 
-<input id='my-input' [value]="title"
+<input id='my-input' #inputElementRef
+[value]="title"
 (keyup.enter)="changeTitle($event.target.value)">
-<button (click)="changeTitle('Button clicked!')">Save</button>
+<button (click)="changeTitle(inputElementRef.value)">Save</button>
