@@ -4,6 +4,6 @@
 
 <input id='my-input' #inputElementRef
 [value]="title"
-(keyup.enter)="changeTitle($event.target.value)">
+(keyup.enter)="submitValue($event.target.value)">
 <!-- IF $event.target.value doesn't work try this: https://stackblitz.com/edit/angular-ivy-vqjrwu?file=src/app/app.component.ts -->
-<button (click)="changeTitle(inputElementRef.value)">Save</button>
+<button (click)="submitValue(inputElementRef.value)">Save</button>
