@@ -1,4 +1,5 @@
 <input id='my-input' #inputElementRef
+placeholder="Add something to do.."
 class="todo-input"
 (keyup.enter)="submitValue($event.target.value)">
 <!-- IF $event.target.value doesn't work try to use inputElemetRef.value or try this: https://stackblitz.com/edit/angular-ivy-vqjrwu?file=src/app/app.component.ts -->

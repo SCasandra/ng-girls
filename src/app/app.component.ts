@@ -9,5 +9,5 @@ import { TodoItem } from './interfaces/todo-item';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-list';
+  title = 'My Todos';
 }

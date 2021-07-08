@@ -4,9 +4,14 @@
   class="todo-checkbox"
   (click)="completeItem()"/>
 
-  <span class="todo-title" [ngClass]="{'todo-complete': item.completed}">
-    {{ item.title }}
-  </span>
+<div (dblclick)="editTitle(true)">
+  <input class="todo-title"
+  [disabled]="!edit"
+  [ngClass]="{'todo-complete': item.completed}"
+  [value]="item.title"
+  (blur)="saveTitle($event.target.value)"
+  (keyup.enter)="saveTitle($event.target.value)" >
+  </div>
 
   <button class="btn btn-red" (click)="removeItem()">
     remove
